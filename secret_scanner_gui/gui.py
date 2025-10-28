@@ -811,11 +811,12 @@ class SecretScannerGUI:
     def _clear_detail_panel(self) -> None:
         self.detail_text.configure(state="normal")
         self.detail_text.delete("1.0", tk.END)
-        placeholder_message = (
-            "Context preview will appear here when you select a finding."
-            " Use the filters above to focus on critical signals."
+        self.detail_text.insert(
+            "1.0", "Context preview will appear here when you select a finding."
         )
-        self.detail_text.insert("1.0", placeholder_message)
+        self.detail_text.insert(
+            "end", " Use the filters above to focus on critical signals."
+        )
         self.detail_text.configure(state="disabled")
 
     def _copy_selected_context(self) -> None:
