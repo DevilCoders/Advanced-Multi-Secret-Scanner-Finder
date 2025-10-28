@@ -813,8 +813,10 @@ class SecretScannerGUI:
         self.detail_text.delete("1.0", tk.END)
         self.detail_text.insert(
             "1.0",
-            "Context preview will appear here when you select a finding."
-            " Use the filters above to focus on critical signals.",
+            (
+                "Context preview will appear here when you select a finding."
+                " Use the filters above to focus on critical signals."
+            ),
         )
         self.detail_text.configure(state="disabled")
 
