@@ -11,7 +11,12 @@ from typing import Iterable, Optional
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-from .scanner import BatchScanResult, Finding, ScanStats, SecretScanner
+from secret_scanner_gui.scanner import (
+    BatchScanResult,
+    Finding,
+    ScanStats,
+    SecretScanner,
+)
 
 
 @dataclass
